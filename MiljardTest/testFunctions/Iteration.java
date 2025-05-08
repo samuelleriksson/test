@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Iteration {
 
     public long result;
-    public ArrayList resultlist;
+    public ArrayList<Integer> resultlist;
 
     public long iteration(int n) {
         long t1 = System.nanoTime();

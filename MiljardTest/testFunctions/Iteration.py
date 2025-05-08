@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 #r1 = iteration(iterationNbr)
 #r2 = arithmetic(iterationNbr)
-l1 = read_integers_from_file("/home/christiant14/LTH/UAPprojekt/MiljardTest/dataInAndOut/dataIn/RandomInts.txt")
+l1 = read_integers_from_file("dataInAndOut/dataIn/RandomInts.txt")
 r3 = timsort(l1)
 print(r3)
 

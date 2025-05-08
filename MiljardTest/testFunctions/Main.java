@@ -4,14 +4,16 @@ public class Main {
         int iterationNbr = 1000000000;
         Iteration runTime = new Iteration();
         FileReaderInts prep = new FileReaderInts();
-        ArrayList<Integer> l = prep.readIntegersFromFile("/home/christiant14/LTH/UAPprojekt/MiljardTest/dataInAndOut/dataIn/RandomInts.txt");
+        ArrayList<Integer> l = prep.readIntegersFromFile("dataInAndOut/dataIn/RandomInts.txt");
    
         long r1 = runTime.iteration(iterationNbr);
         long r2 = runTime.arithmetic(iterationNbr);
         long r3 = runTime.timsort(l);
-        System.out.println("Iteration: " + r1);
-        System.out.println("Arithmetic: " + r2);
-        System.out.println("Timsort: " + r3);
-
+        System.out.println(r1);
+        System.out.println(r2);
+        System.out.println(r3);
+        prep.writeIntegersToFileAppended("dataInAndOut/dataOut/javaIterationData.txt", r1);
+        prep.writeIntegersToFileAppended("dataInAndOut/dataOut/javaArithmeticData.txt", r2);
+        prep.writeIntegersToFileAppended("dataInAndOut/dataOut/javaSortData.txt", r3);
     }
 }

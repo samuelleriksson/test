@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-import java.io.BufferedReader;
+
 
 
 public class FileReaderInts {
@@ -23,5 +23,14 @@ public class FileReaderInts {
         }
 
         return numbers;
+    }
+
+    public void writeIntegersToFileAppended(String filePath, long toWrite) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath, true))) {
+            writer.write(Long.toString(toWrite));
+            writer.newLine(); // Ensures it goes to a new line
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
