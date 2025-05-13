@@ -1,7 +1,7 @@
 import time
 import sys
 
-iterationNbr = 1000000000;
+iterationNbr = 1000000000
 
 def iteration(n):
     t1 = time.time_ns()
@@ -50,14 +50,14 @@ if len(sys.argv) > 1: #som switch sats i java, tar args från CLI så att det ä
     match sys.argv[1]:
         case "1":
             r1 = iteration(iterationNbr)
-            writeToFile("/home/burk/LTH/UAPprojekt/test/MiljardTest/dataInAndOut/dataOut/pythonIterationData.txt", r1)
+            writeToFile("MiljardTest/dataInAndOut/dataOut/pythonIterationData.txt", r1)
         case "2":
             r2 = arithmetic(iterationNbr)
-            writeToFile("/home/burk/LTH/UAPprojekt/test/MiljardTest/dataInAndOut/dataOut/pythonArithmeticData.txt", r2)
+            writeToFile("MiljardTest/dataInAndOut/dataOut/pythonArithmeticData.txt", r2)
         case "3":
-            l1 = readIntegersFromFile("/home/burk/LTH/UAPprojekt/test/MiljardTest/dataInAndOut/dataIn/RandomInts.txt")
+            l1 = readIntegersFromFile("MiljardTest/dataInAndOut/dataIn/RandomInts.txt")
             r3 = timsort(l1)
-            writeToFile("/home/burk/LTH/UAPprojekt/test/MiljardTest/dataInAndOut/dataOut/pythonSortData.txt", r3)
+            writeToFile("MiljardTest/dataInAndOut/dataOut/pythonSortData.txt", r3)
         case _:
             print("Unknown argument")
 else:
